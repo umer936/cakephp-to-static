@@ -11,6 +11,13 @@ use PHPUnit\Framework\TestCase;
 
 final class ExportCommandTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        if (!defined('ROOT')) {
+            define('ROOT', dirname(__DIR__));
+        }
+    }
+
     public function testDebugBuildIsRejectedBeforeReadingConfiguration(): void
     {
         $previous = Configure::read('debug');
