@@ -30,17 +30,16 @@ datasets or in the host application's normal rendering; analysis never reads rec
 
 ## Installation
 
-The repository is not automatically published to Packagist. Until a release is
-submitted, add a Composer VCS repository in the host application:
+Install from [Packagist](https://packagist.org/packages/umer936/cakephp-to-static).
+Until a versioned release is tagged, select the development branch explicitly:
 
 ```sh
-composer config repositories.cakephp-to-static vcs https://github.com/umer936/cakephp-to-static.git
 composer require --dev umer936/cakephp-to-static:dev-main
 bin/cake plugin load CakephpToStatic
 ```
 
-For unpublished local development, use a Composer `path` repository pointing to
-your checkout instead of the VCS repository. Install this package as a development
+For local development, use a Composer `path` repository pointing to
+your checkout. Install this package as a development
 dependency; the deployed static site will not need it.
 
 ## Usage
@@ -169,6 +168,6 @@ Tests use temporary source/export fixtures and require no database or host app.
 
 The package has CakePHP plugin metadata, PSR-4 autoloading, and an Unlicense
 license matching this repository. Before a public release, review the API and
-limitations, test supported PHP/CakePHP versions, push changes, submit the GitHub
-repository to Packagist, and tag a semantic version. This checkout does not
+limitations, test supported PHP/CakePHP versions, push changes,
+and tag a semantic version. The package is already listed on Packagist. This checkout does not
 publish or tag anything automatically.
